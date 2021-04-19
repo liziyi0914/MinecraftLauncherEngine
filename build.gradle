@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "5.1.0"
+}
+
+group 'com.liziyi0914'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven {
+        url 'https://maven.aliyun.com/repository/public/'
+    }
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.alibaba:fastjson:1.2.73'
+    compile 'commons-codec:commons-codec:1.14'
+    compile 'commons-io:commons-io:2.7'
+    compile 'org.apache.commons:commons-compress:1.20'
+    implementation 'commons-cli:commons-cli:1.4'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
